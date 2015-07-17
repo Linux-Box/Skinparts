@@ -1,0 +1,331 @@
+<skin>
+
+	<screen name="ChannelSelection" position="center,center" size="1280,720" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
+    <!-- /*Infobar-->
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/flechas.png" position="34,433" size="64,43" zPosition="-30" />
+    <eLabel backgroundColor="white" name="InfoBar" position="141,476" size="1090,136" zPosition="-10" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/barrahor1.png" position="98,612" size="525,43" backgroundColor="black" zPosition="-30" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/play1.png" position="556,433" size="64,43" zPosition="-30" />
+    <eLabel backgroundColor="un42b3" position="98,433" size="458,43" transparent="0" zPosition="-31" />
+    <eLabel backgroundColor="un42b3" position="620,433" size="611,43" transparent="0" zPosition="-31" />
+    <!--  WEATHER WIDGET */ -->
+    <!--/* CHANNEL NAME -->
+    <widget backgroundColor="un42b3" font="Regular; 30" halign="left" position="119,433" render="Label" size="366,43" source="session.CurrentService" transparent="1" valign="top" foregroundColor="white" zPosition="-1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <!-- CHANNEL NAME */-->
+    <!-- /* STYLE CLASSIC -->
+    <widget alphatest="blend" position="143,478" render="XPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <!--<widget source="session.Event_Now" render="Label" position="286,563" size="805,56" font="RegularLight; 37" halign="left" backgroundColor="iplusBackground" transparent="1" noWrap="1">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget font="Regular; 26" foregroundColor="white" noWrap="1" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" position="632,436" render="RunningText" size="463,43" source="session.Event_Now" transparent="1" backgroundColor="un42b3" zPosition="0">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="un42b3" font="Regular; 26" halign="right" position="1092,436" render="Label" size="127,43" source="session.Event_Now" transparent="1" foregroundColor="white">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget pixmap="openplusHD/colors/00a61d4d.png" position="288,661" render="Progress" size="943,-39" source="session.Event_Now" transparent="1" zPosition="7">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget font="Arial; 26" foregroundColor="un585858" halign="right" position="327,490" render="Label" size="125,40" source="session.Event_Next" transparent="1" valign="center" backgroundColor="white">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel font="Arial; 26" foregroundColor="un585858" halign="center" position="460,490" size="15,40" text="&gt;" transparent="1" valign="center" backgroundColor="white" />
+    <widget font="Arial; 26" foregroundColor="un585858" halign="left" position="483,490" render="Label" size="85,40" source="session.Event_Next" transparent="1" valign="center" backgroundColor="white">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <!--<widget source="session.Event_Next" render="Label" position="441,624" size="670,40" font="Regular; 24" halign="left" backgroundColor="iplusBackground" transparent="1" foregroundColor="iplusAccent1" valign="top">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget backgroundColor="white" font="Arial; 26" foregroundColor="un585858" halign="left" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" position="572,495" render="RunningText" size="520,35" source="session.Event_Next" transparent="1" valign="top">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget font="Arial; 26" foregroundColor="un585858" halign="right" position="1096,494" render="Label" size="123,40" source="session.Event_Next" transparent="1" backgroundColor="white">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <!-- STYLE CLASSIC */ -->
+    <!--  /* ClockWidget  -->
+    <!--/* ICONOS INFO -->
+    <eLabel backgroundColor="un929292" position="98,8" size="1133,43" transparent="0" zPosition="-10" />
+    <!-- ICONOS INFO */-->
+    <!-- /* TUNERTYPE -->
+    <!-- TUNERTYPE */-->
+    <eLabel backgroundColor="black" foregroundColor="black" position="388,559" size="233,25" />
+    <widget backgroundColor="iplusBackground" borderWidth="0" pixmap="openplusHD/colors/00a61d4d.png" position="388,559" render="Progress" size="233,25" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget backgroundColor="un929292" font="nmsbd2; 25" halign="right" position="1136,9" render="Label" size="82,43" source="global.CurrentTime" transparent="1" valign="center" foregroundColor="white">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel backgroundColor="un929292" position="623,612" size="608,43" transparent="0" zPosition="-23" />
+    <widget source="session.CurrentService" render="Label" position="460,433" size="89,43" font="Regular; 31" valign="top" halign="right" transparent="1" foregroundColor="white" zPosition="0" backgroundColor="un42b3">
+      <convert type="ExtendedServiceInfo">ServiceNumber</convert>
+    </widget>
+    <!--Infobar */-->
+    <widget source="ServiceEvent" options="movetype=running,direction=top,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" render="RunningText" position="868,58" size="350,230" font="Regular; 18" foregroundColor="white" backgroundColor="un42b3" transparent="1" valign="top" halign="left">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="981,26" size="159,30" font="Regular; 17" halign="right" backgroundColor="un929292" foregroundColor="white" transparent="1">
+      <convert type="ClockToText">Format:%e. %B</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1018,8" size="122,30" font="Regular; 17" halign="right" backgroundColor="un929292" foregroundColor="white" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <widget name="list" position="145,58" size="713,371" picServiceEventProgressbar="openplusHD/linea.png" scrollbarMode="showNever" foregroundColor="un444444" colorServiceDescription="un42b3" colorServiceDescriptionSelected="white" colorEventProgressbarBorder="un444444" colorEventProgressbarBorderSelected="iplusForeground" foregroundColorServiceNotAvail="#00555555" serviceItemHeight="30" serviceNumberFont="Regular;51" serviceNameFont="Regular;20" serviceInfoFont="Regular;16" transparent="0" backgroundColor="white" backgroundColorSelected="un42b3" itemHeight="50" />
+    <widget source="Title" render="Label" position="114,15" size="607,43" font="nmsbd2; 25" backgroundColor="un929292" transparent="1" foregroundColor="white" noWrap="1" />
+    <widget source="ServiceEvent" render="openplusHDSingleEpgList" position="868,302" size="350,125" font="Regular; 18" backgroundColor="un42b3" foregroundColor="unf0b400" noWrap="1" transparent="1" />
+    <!-- /*Buttons-->
+    <ePixmap name="new ePixmap" position="1150,616" size="81,36" pixmap="openplusHD/key_menul.png" />
+    <ePixmap pixmap="openplusHD/buttons/red.png" position="632,572" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/buttons/green.png" position="780,572" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/buttons/yellow.png" position="927,572" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/buttons/blue.png" position="1076,572" size="30,40" alphatest="blend" />
+    <widget name="key_red" position="668,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="key_green" position="815,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="key_yellow" position="963,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="key_blue" position="1112,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <eLabel position="894,294" size="306,1" backgroundColor="white" foregroundColor="white" />
+    <!--Button */-->
+    <!-- /*ClockWidget-->
+    <!--ClockWidget */-->
+    <eLabel position="141,51" zPosition="-11" size="720,382" backgroundColor="white" />
+    <eLabel position="860,51" zPosition="-11" size="371,382" backgroundColor="transpblue" />
+    <eLabel backgroundColor="transpBlackb" position="98,612" size="525,43" transparent="0" zPosition="-32" />
+    <eLabel backgroundColor="transpBlackb" position="98,476" size="43,136" transparent="0" zPosition="-32" />
+    <eLabel backgroundColor="transpBlackb" position="98,51" size="43,382" transparent="0" zPosition="-32" />
+  </screen>
+	<screen name="ChannelSelectionRadio" position="center,center" size="1280,720" backgroundColor="transparent">
+    <widget name="list" position="117,195" size="436,407" zPosition="3" backgroundColorSelected="#fe0062" scrollbarMode="showNever" foregroundColor="white" backgroundColor="black" foregroundColorEvent="darkgrey" foregroundColorEventSelected="menu-title-frgrnd" foregroundColorServiceNotAvail="#2c2c2c" serviceItemHeight="50" serviceNumberFont="Regular;24" serviceNameFont="Regular;24" serviceInfoFont="Regular;21" transparent="1" />
+    <eLabel position="80,191" size="30,416" transparent="0" foregroundColor="white" backgroundColor="un939393" />
+    <widget alphatest="blend" position="602,250" render="LPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <!-- colores keys -->
+    <eLabel text="TODO" position="640,530" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
+    <eLabel position="605,530" size="35,35" transparent="0" foregroundColor="white" backgroundColor="unee1d11" zPosition="4" />
+    <eLabel text="PROVEEDORES" position="640,570" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
+    <eLabel position="605,570" size="35,35" transparent="0" foregroundColor="white" backgroundColor="uneefb1a" zPosition="4" />
+    <eLabel text="SATELITE" position="640,490" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
+    <eLabel position="605,490" size="35,35" transparent="0" foregroundColor="white" backgroundColor="un11b90a" zPosition="4" />
+    <eLabel text="FAVORITOS" position="640,450" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
+    <eLabel position="605,450" size="35,35" transparent="0" foregroundColor="white" backgroundColor="un1a2cfb" zPosition="4" />
+    <!-- fin colores keys -->
+    <eLabel position="80,640" size="760,50" transparent="0" foregroundColor="white" backgroundColor="un929292" />
+    <eLabel text="PULSE EXIT PARA VOLVER A TV" position="100,644" size="500,50" font="Regular; 30" zPosition="2" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="un8f8f8f" />
+    <eLabel text="MUSICA" position="80,33" size="120,38" font="Arial; 26" backgroundColor="white" transparent="1" foregroundColor="unfc0063" />
+    <eLabel position="200,34" size="1,28" backgroundColor="black" transparent="0" foregroundColor="iplusPink" halign="center" />
+    <widget source="Title" render="Label" position="203,33" size="620,35" font="Arial; 25" foregroundColor="black" backgroundColor="white" transparent="1" />
+    <eLabel position="37,78" size="43,43" backgroundColor="unfc0063" transparent="0" foregroundColor="unfc0063" zPosition="-1" />
+    <eLabel text=" Estas escuchando:" position="80,78" size="740,43" backgroundColor="black" transparent="0" font="Regular; 30" foregroundColor="white" zPosition="-1" />
+    <eLabel text="MENU" position="730,650" size="100,30" zPosition="5" font="Regular;20" valign="center" halign="center" backgroundColor="white" foregroundColor="black" transparent="0" />
+    <widget source="session.CurrentService" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=25,repeat=150,startdelay=1500,always=0" position="355,78" size="466,45" font="Regular; 22" transparent="1" valign="center" zPosition="2" backgroundColor="black" foregroundColor="white" noWrap="1" halign="center">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget backgroundColor="un140b1" font="Regular; 25" halign="center" position="80,121" render="Label" size="740,40" source="global.CurrentTime" transparent="0" valign="center" foregroundColor="white">
+      <convert type="ClockToText">Full</convert>
+    </widget>
+    <ePixmap pixmap="openplusHD/icons/barraicon.png" position="80,200" zPosition="8" size="28,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/radio.png" position="0,0" zPosition="-100" size="1280,720" alphatest="blend" />
+    <eLabel position="110,191" size="450,416" backgroundColor="black" transparent="0" font="Regular; 30" foregroundColor="white" zPosition="-1" />
+  </screen>
+	<screen name="SlimChannelSelection" position="center,center" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+    <!-- /*Infobar-->
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/flechas.png" position="34,433" size="64,43" zPosition="-30" />
+    <eLabel backgroundColor="white" name="InfoBar" position="141,476" size="1090,136" zPosition="-10" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/barrahor1.png" position="98,612" size="525,43" backgroundColor="black" zPosition="-30" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/play1.png" position="556,433" size="64,43" zPosition="-30" />
+    <eLabel backgroundColor="un42b3" position="98,433" size="458,43" transparent="0" zPosition="-31" />
+    <eLabel backgroundColor="un42b3" position="620,433" size="611,43" transparent="0" zPosition="-31" />
+    <!--  WEATHER WIDGET */ -->
+    <!--/* CHANNEL NAME -->
+    <widget backgroundColor="un42b3" font="Regular; 30" halign="left" position="119,433" render="Label" size="366,43" source="session.CurrentService" transparent="1" valign="top" foregroundColor="white" zPosition="-1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <!-- CHANNEL NAME */-->
+    <!-- /* STYLE CLASSIC -->
+    <widget alphatest="blend" position="143,478" render="XPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <!--<widget source="session.Event_Now" render="Label" position="286,563" size="805,56" font="RegularLight; 37" halign="left" backgroundColor="iplusBackground" transparent="1" noWrap="1">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget font="Regular; 26" foregroundColor="white" noWrap="1" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" position="632,436" render="RunningText" size="463,43" source="session.Event_Now" transparent="1" backgroundColor="un42b3" zPosition="0">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="un42b3" font="Regular; 26" halign="right" position="1092,436" render="Label" size="127,43" source="session.Event_Now" transparent="1" foregroundColor="white">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget pixmap="openplusHD/colors/00a61d4d.png" position="288,661" render="Progress" size="943,-39" source="session.Event_Now" transparent="1" zPosition="7">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget font="Arial; 26" foregroundColor="un585858" halign="right" position="327,490" render="Label" size="125,40" source="session.Event_Next" transparent="1" valign="center" backgroundColor="white">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel font="Arial; 26" foregroundColor="un585858" halign="center" position="460,490" size="15,40" text="&gt;" transparent="1" valign="center" backgroundColor="white" />
+    <widget font="Arial; 26" foregroundColor="un585858" halign="left" position="483,490" render="Label" size="85,40" source="session.Event_Next" transparent="1" valign="center" backgroundColor="white">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <!--<widget source="session.Event_Next" render="Label" position="441,624" size="670,40" font="Regular; 24" halign="left" backgroundColor="iplusBackground" transparent="1" foregroundColor="iplusAccent1" valign="top">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget backgroundColor="white" font="Arial; 26" foregroundColor="un585858" halign="left" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" position="572,495" render="RunningText" size="520,35" source="session.Event_Next" transparent="1" valign="top">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget font="Arial; 26" foregroundColor="un585858" halign="right" position="1096,494" render="Label" size="123,40" source="session.Event_Next" transparent="1" backgroundColor="white">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <!-- STYLE CLASSIC */ -->
+    <!--  /* ClockWidget  -->
+    <!--/* ICONOS INFO -->
+    <eLabel backgroundColor="un929292" position="98,8" size="1133,43" transparent="0" zPosition="-10" />
+    <!-- ICONOS INFO */-->
+    <!-- /* TUNERTYPE -->
+    <!-- TUNERTYPE */-->
+    <eLabel backgroundColor="black" foregroundColor="black" position="388,559" size="233,25" />
+    <widget backgroundColor="iplusBackground" borderWidth="0" pixmap="openplusHD/colors/00a61d4d.png" position="388,559" render="Progress" size="233,25" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget backgroundColor="un929292" font="nmsbd2; 25" halign="right" position="1136,9" render="Label" size="82,43" source="global.CurrentTime" transparent="1" valign="center" foregroundColor="white">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel backgroundColor="un929292" position="623,612" size="608,43" transparent="0" zPosition="-23" />
+    <widget source="session.CurrentService" render="Label" position="460,433" size="89,43" font="Regular; 31" valign="top" halign="right" transparent="1" foregroundColor="white" zPosition="0" backgroundColor="un42b3">
+      <convert type="ExtendedServiceInfo">ServiceNumber</convert>
+    </widget>
+    <!--Infobar */-->
+    <widget source="ServiceEvent" options="movetype=running,direction=top,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" render="RunningText" position="868,58" size="350,230" font="Regular; 18" foregroundColor="white" backgroundColor="un42b3" transparent="1" valign="top" halign="left">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="981,26" size="159,30" font="Regular; 17" halign="right" backgroundColor="un929292" foregroundColor="white" transparent="1">
+      <convert type="ClockToText">Format:%e. %B</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1018,8" size="122,30" font="Regular; 17" halign="right" backgroundColor="un929292" foregroundColor="white" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <widget name="list" position="145,58" size="713,371" picServiceEventProgressbar="openplusHD/linea.png" scrollbarMode="showNever" foregroundColor="un444444" colorServiceDescription="un42b3" colorServiceDescriptionSelected="white" colorEventProgressbarBorder="un444444" colorEventProgressbarBorderSelected="iplusForeground" foregroundColorServiceNotAvail="#00555555" serviceItemHeight="30" serviceNumberFont="Regular;51" serviceNameFont="Regular;20" serviceInfoFont="Regular;16" transparent="0" backgroundColor="white" backgroundColorSelected="un42b3" itemHeight="50" />
+    <widget source="Title" render="Label" position="114,15" size="607,43" font="nmsbd2; 25" backgroundColor="un929292" transparent="1" foregroundColor="white" noWrap="1" />
+    <widget source="ServiceEvent" render="openplusHDSingleEpgList" position="868,302" size="350,125" font="Regular; 18" backgroundColor="un42b3" foregroundColor="unf0b400" noWrap="1" transparent="1" />
+    <!-- /*Buttons-->
+    <ePixmap name="new ePixmap" position="1150,616" size="81,36" pixmap="openplusHD/key_menul.png" />
+    <ePixmap pixmap="openplusHD/buttons/red.png" position="632,572" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/buttons/green.png" position="780,572" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/buttons/yellow.png" position="927,572" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/buttons/blue.png" position="1076,572" size="30,40" alphatest="blend" />
+    <widget name="key_red" position="668,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="key_green" position="815,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="key_yellow" position="963,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="key_blue" position="1112,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <eLabel position="894,294" size="306,1" backgroundColor="white" foregroundColor="white" />
+    <!--Button */-->
+    <!-- /*ClockWidget-->
+    <!--ClockWidget */-->
+    <eLabel position="141,51" zPosition="-11" size="720,382" backgroundColor="white" />
+    <eLabel position="860,51" zPosition="-11" size="371,382" backgroundColor="transpblue" />
+    <eLabel backgroundColor="transpBlackb" position="98,612" size="525,43" transparent="0" zPosition="-32" />
+    <eLabel backgroundColor="transpBlackb" position="98,476" size="43,136" transparent="0" zPosition="-32" />
+    <eLabel backgroundColor="transpBlackb" position="98,51" size="43,382" transparent="0" zPosition="-32" />
+  </screen>
+	
+	
+	<!--Seleccion simple de canales/-->
+	<screen name="SimpleChannelSelection" position="center,center" size="1280,720" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
+    <!-- /*Infobar-->
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/flechas.png" position="34,433" size="64,43" zPosition="-30" />
+    <eLabel backgroundColor="white" name="InfoBar" position="141,476" size="1090,136" zPosition="-10" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/barrahor1.png" position="98,612" size="525,43" backgroundColor="black" zPosition="-30" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/play1.png" position="556,433" size="64,43" zPosition="-30" />
+    <eLabel backgroundColor="un42b3" position="98,433" size="458,43" transparent="0" zPosition="-31" />
+    <eLabel backgroundColor="un42b3" position="620,433" size="611,43" transparent="0" zPosition="-31" />
+    <!--  WEATHER WIDGET */ -->
+    <!--/* CHANNEL NAME -->
+    <widget backgroundColor="un42b3" font="Regular; 30" halign="left" position="119,433" render="Label" size="366,43" source="session.CurrentService" transparent="1" valign="top" foregroundColor="white" zPosition="-1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <!-- CHANNEL NAME */-->
+    <!-- /* STYLE CLASSIC -->
+    <ePixmap pixmap="openplusHD/icons/simplechanel.png" alphatest="blend" position="143,478" size="220,132" transparent="1" zPosition="4" />
+    <ePixmap pixmap="openplusHD/logochanel.png" alphatest="blend" position="865,82" size="310,350" transparent="1" zPosition="4" />
+    <!--<widget source="session.Event_Now" render="Label" position="286,563" size="805,56" font="RegularLight; 37" halign="left" backgroundColor="iplusBackground" transparent="1" noWrap="1">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget font="Regular; 26" foregroundColor="white" noWrap="1" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" position="632,436" render="RunningText" size="463,43" source="session.Event_Now" transparent="1" backgroundColor="un42b3" zPosition="0">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="un42b3" font="Regular; 26" halign="right" position="1092,436" render="Label" size="127,43" source="session.Event_Now" transparent="1" foregroundColor="white">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget pixmap="openplusHD/colors/00a61d4d.png" position="288,661" render="Progress" size="943,-39" source="session.Event_Now" transparent="1" zPosition="7">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget font="Arial; 26" foregroundColor="un585858" halign="right" position="327,490" render="Label" size="125,40" source="session.Event_Next" transparent="1" valign="center" backgroundColor="white">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel font="Arial; 26" foregroundColor="un585858" halign="center" position="460,490" size="15,40" text="&gt;" transparent="1" valign="center" backgroundColor="white" />
+    <widget font="Arial; 26" foregroundColor="un585858" halign="left" position="483,490" render="Label" size="85,40" source="session.Event_Next" transparent="1" valign="center" backgroundColor="white">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <!--<widget source="session.Event_Next" render="Label" position="441,624" size="670,40" font="Regular; 24" halign="left" backgroundColor="iplusBackground" transparent="1" foregroundColor="iplusAccent1" valign="top">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget backgroundColor="white" font="Arial; 26" foregroundColor="un585858" halign="left" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" position="572,495" render="RunningText" size="520,35" source="session.Event_Next" transparent="1" valign="top">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget font="Arial; 26" foregroundColor="un585858" halign="right" position="1096,494" render="Label" size="123,40" source="session.Event_Next" transparent="1" backgroundColor="white">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <!-- STYLE CLASSIC */ -->
+    <!--  /* ClockWidget  -->
+    <!--/* ICONOS INFO -->
+    <eLabel backgroundColor="un929292" position="98,8" size="1133,43" transparent="0" zPosition="-10" />
+    <eLabel text="ESCOJA EL CANAL A GRABAR" backgroundColor="un929292" foregroundColor="white" font="Arial; 23" position="742,622" size="400,36" transparent="1" zPosition="3" halign="center" />
+    <!-- ICONOS INFO */-->
+    <!-- /* TUNERTYPE -->
+    <!-- TUNERTYPE */-->
+    <eLabel backgroundColor="black" foregroundColor="black" position="388,559" size="233,25" />
+    <widget backgroundColor="iplusBackground" borderWidth="0" pixmap="openplusHD/colors/00a61d4d.png" position="388,559" render="Progress" size="233,25" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget backgroundColor="un929292" font="nmsbd2; 25" halign="center" position="1136,9" render="Label" size="82,43" source="global.CurrentTime" transparent="1" valign="center" foregroundColor="white">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel backgroundColor="un929292" position="623,612" size="608,43" transparent="0" zPosition="-30" />
+    <widget source="session.CurrentService" render="Label" position="460,433" size="89,43" font="Regular; 31" valign="top" halign="right" transparent="1" foregroundColor="white" zPosition="0" backgroundColor="un42b3">
+      <convert type="ExtendedServiceInfo">ServiceNumber</convert>
+    </widget>
+    <!--Infobar */-->
+    <eLabel backgroundColor="transpBlackb" position="98,50" size="43,382" transparent="0" zPosition="-32" />
+    <widget name="list" position="147,58" size="680,371" picServiceEventProgressbar="openplusHD/linea.png" scrollbarMode="showNever" foregroundColor="un444444" colorServiceDescription="un42b3" Picon="False" colorServiceDescriptionSelected="white" colorEventProgressbarBorder="un444444" colorEventProgressbarBorderSelected="iplusForeground" foregroundColorServiceNotAvail="#00555555" serviceItemHeight="30" serviceNumberFont="Regular;51" serviceNameFont="Regular;20" serviceInfoFont="Regular;16" transparent="0" backgroundColor="white" backgroundColorSelected="un42b3" itemHeight="50" />
+    <widget source="Title" render="Label" position="114,15" size="700,43" font="nmsbd2; 25" backgroundColor="un929292" transparent="1" foregroundColor="white" noWrap="1" />
+    <!-- /*Buttons-->
+    <ePixmap pixmap="openplusHD/buttons/red.png" position="632,572" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/buttons/green.png" position="780,572" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/buttons/yellow.png" position="927,572" size="30,40" alphatest="blend" />
+    <ePixmap pixmap="openplusHD/buttons/blue.png" position="1076,572" size="30,40" alphatest="blend" />
+    <widget name="key_red" position="668,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="key_green" position="815,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="key_yellow" position="963,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="key_blue" position="1112,581" size="110,24" zPosition="1" font="Regular; 22" halign="left" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <!--Button */-->
+    <!-- /*ClockWidget-->
+    <!--ClockWidget */-->
+    <eLabel position="141,51" zPosition="-11" size="1089,382" backgroundColor="white" />
+    <eLabel backgroundColor="transpBlackb" position="98,612" size="525,43" transparent="0" zPosition="-32" />
+    <eLabel backgroundColor="transpBlackb" position="98,476" size="43,136" transparent="0" zPosition="-32" />
+  </screen>
+	<!--fin seleccion simple canales/-->
+</skin>
