@@ -2544,120 +2544,129 @@
  	 <widget source="key_red" render="Label" position="0,441" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="red" transparent="0" />
     <widget source="key_green" render="Label" position="155,441" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="green" transparent="0" />
     </screen>
-	<screen name="nPlaylist" position="center,center" size="1180,720" backgroundColor="white" flags="wfNoBorder" title="Playlist"> 
+	<screen name="nPlaylist" position="center,center" size="1180,710" backgroundColor="white" flags="wfNoBorder" transparent="0"> 
 	
 	<widget name="feedlist" position="26,90" size="760,523" backgroundColor="black" foregroundColor="white" enableWrapAround="1" zPosition="1" scrollbarMode="showNever" transparent="0" /> 
-	<widget backgroundColor="uncd3870" foregroundColor="white" position="805,85" size="351,225" name="description" font="Regular; 16" transparent="1" />
-	<widget backgroundColor="black" foregroundColor="white" position="50,13" size="940,40" name="playlist" zPosition="1" font="Regular;30" transparent="1" />
-	<widget name="time" position="1047,12" size="114,44" font="Regular; 35" foregroundColor="white" backgroundColor="black" transparent="1" halign="right" />
+	<widget backgroundColor="iplusPink" foregroundColor="white" position="806,398" size="351,289" name="description" font="Regular; 16" transparent="1" />
+	<widget backgroundColor="black" foregroundColor="white" position="55,15" size="940,43" name="playlist" zPosition="1" font="Regular;30" transparent="1" />
+	<widget name="time" position="1047,12" size="114,43" font="Regular; 35" foregroundColor="white" backgroundColor="black" transparent="1" halign="right" valign="top" />
 	
-	<widget name="poster" position="860,328" size="253,302" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyStreamVOD/img/clear.png" zPosition="1" transparent="1" alphatest="blend" />
+	<widget name="poster" position="848,80" size="253,302" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyStreamVOD/img/clear.png" zPosition="1" transparent="1" alphatest="blend" />
 
 	<!--<widget name="info" font="RegularIPTV;22" backgroundColor="#41000000" foregroundColor="#ffffff" position="1140,120" size="114,370" /> -->
 	
-	<eLabel position="773,105" zPosition="-14" size="35,18" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="uncd3870" valign="top" />
+	<eLabel position="775,434" zPosition="-14" size="35,18" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="iplusPink" valign="top" />
 	
-	<eLabel position="27,657" zPosition="4" size="35,25" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="red" valign="top" />		
+	<eLabel position="167,647" zPosition="4" size="35,35" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="green" valign="top" />		
 	
-	<widget name="pixmap2a" position="224,657" size="35,25" pixmap="openplusHD/buttons/chmnus.png" zPosition="3" transparent="1" alphatest="blend" />
-	<widget name="pixmap3a" position="421,657" size="35,25" pixmap="openplusHD/buttons/chplus.png" zPosition="3" transparent="1" alphatest="blend" />
-	<widget name="pixmap4a" position="618,657" size="35,25" pixmap="openplusHD/buttons/stop.png" zPosition="3" transparent="1" alphatest="blend" />
-	<eLabel position="26,80" zPosition="-4" size="760,550" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="black" />
-	<widget name="chminus" position="262,654" zPosition="4" size="130,25" halign="left" font="Regular; 22" transparent="1" foregroundColor="black" backgroundColor="white" />
-	<widget name="chplus" position="459,654" zPosition="4" size="130,25" halign="left" font="Regular; 22" transparent="1" foregroundColor="black" backgroundColor="white" />
-	<widget name="stop" position="656,654" zPosition="4" size="130,25" halign="left" font="Regular; 22" transparent="1" foregroundColor="black" backgroundColor="white" />		   
-<eLabel position="0,15" size="43,43" backgroundColor="unfc0063" transparent="0" foregroundColor="unfc0063" zPosition="-1" />
+	
+	
+	
+	<eLabel position="26,80" zPosition="-4" size="760,613" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="black" />
+	
+	
+			   
+<eLabel position="0,0" size="1180,710" backgroundColor="white" transparent="0" foregroundColor="white" zPosition="-100" />
 <eLabel position="43,15" size="1137,43" backgroundColor="black" transparent="0" foregroundColor="iplusPink" zPosition="-1" />
-<eLabel position="65,654" zPosition="4" size="130,25" halign="left" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="white" text="Inicio" valign="center" />
-<eLabel position="798,80" zPosition="-14" size="365,236" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="uncd3870" valign="top" />
-</screen>
-	<screen name="nIPTVplayer" position="0,530" size="1280,190" flags="wfNoBorder" title="IPTVplayer" backgroundColor="transpWhite">
-    <ePixmap position="80,4" size="72,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/72x36.png" zPosition="1" transparent="0" />
-	<widget position="84,7" halign="center" size="64,28" foregroundColor="black" zPosition="2" name="channel_number" transparent="1" font="Regular;34" backgroundColor="transpWhite" />
-	<widget position="160,7" size="650,34" foregroundColor="white" backgroundColor="iplusPink" name="channel_name" font="Regular;34" />
-	<widget position="815,10" size="300,26" halign="right" foregroundColor="white" backgroundColor="iplusPink" name="group" font="Regular;26" />
-	<widget name="picon" position="120,68" size="35,35" backgroundColor="iplusPink" foregroundColor="white" />
-	<ePixmap position="80,50" size="117,72" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/pristavka.png" zPosition="10" transparent="1" alphatest="blend" />   	 
-	<widget position="300,56" size="650,25" foregroundColor="white" backgroundColor="iplusPink" name="programm" font="Regular;24" />
-
-	<ePixmap position="1115,4" size="72,36" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/72x36.png" zPosition="1" transparent="0" /> 
-	<widget position="1118,9" size="66,26" foregroundColor="black" halign="center" zPosition="2" name="time_now" transparent="1" font="Regular;28" backgroundColor="transpWhite" />
-	<ePixmap position="1070,50" size="117,72" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/network.png" zPosition="1" transparent="1" alphatest="blend" /> 
-    <widget source="session.CurrentService" render="Label" zPosition="4" position="1107,128" size="55,22" halign="right" font="Regular;22" transparent="1" foregroundColor="black" backgroundColor="transpWhite">
-      <convert type="ServiceInfo">VideoWidth</convert>
-    </widget>
-    <eLabel text="x" zPosition="4" position="1168,128" size="15,22" halign="left" font="Regular;22" foregroundColor="black" transparent="1" backgroundColor="transpWhite" />
-    <widget source="session.CurrentService" render="Label" zPosition="4" position="1184,128" size="55,22" halign="left" font="Regular;22" foregroundColor="black" transparent="1" backgroundColor="transpWhite">
-      <convert type="ServiceInfo">VideoHeight</convert>
-    </widget>	
+<eLabel position="202,647" zPosition="4" size="130,35" halign="left" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="black" text=" Descargas" valign="center" />
+<eLabel position="798,393" zPosition="-14" size="365,300" halign="center" font="Regular; 20" transparent="0" foregroundColor="white" backgroundColor="iplusPink" valign="top" />
+<eLabel position="502,647" zPosition="4" size="35,35" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="blue" valign="top" />
+<eLabel position="43,647" zPosition="4" size="35,35" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="red" valign="top" />
+<eLabel position="339,647" zPosition="4" size="35,35" halign="center" font="Regular;22" transparent="0" foregroundColor="white" backgroundColor="unffff00" valign="top" />
+<eLabel position="78,647" zPosition="4" size="93,35" halign="left" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="black" text=" Inicio" valign="center" />
+<eLabel position="538,647" zPosition="4" size="271,35" halign="left" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="black" text=" Continuar Reproduccion" valign="center" />
+<eLabel position="374,647" zPosition="4" size="130,35" halign="left" font="Regular; 20" transparent="1" foregroundColor="white" backgroundColor="black" text=" Historial" valign="center" />
+<eLabel position="0,15" size="43,43" backgroundColor="iplusPink" transparent="0" foregroundColor="iplusPink" zPosition="-1" />
 </screen>
 
-<screen name="nVODplayer" position="0,550" size="1280,161" backgroundColor="transpWhite" flags="wfNoBorder" title="Videoplayer">
-        
-	<ePixmap position="62,35" size="100,70" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/player.png" zPosition="1" transparent="0" />
-	<widget name="state" font="Regular; 20" position="72,61" size="80,24" transparent="1" backgroundColor="transpWhite" foregroundColor="black" zPosition="10" />
-	<widget name="cover" position="1104,50" size="117,72" zPosition="1" transparent="1" alphatest="blend" foregroundColor="black" backgroundColor="transpWhite" />
-	<widget source="session.CurrentService" foregroundColor="black" render="Label" position="190,8" size="90,20" font="Regular;20" halign="left" valign="center" backgroundColor="transpWhite" transparent="1">
-		<convert type="ServicePosition">Position</convert>
-	</widget>
-	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/slider_1280x10_hbg.png" position="190,35" size="900,6" zPosition="1" />
-	<widget source="session.CurrentService" render="PositionGauge" backgroundColor="black" position="190,35" size="900,6" zPosition="2" pointer="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/slider_1280x10_hfg.png:1290,0" transparent="1">
-		<convert type="ServicePosition">Gauge</convert>
-	</widget>
-	<widget source="session.CurrentService" foregroundColor="black" render="Label" position="191,45" size="800,50" font="Regular; 30" backgroundColor="transpWhite" transparent="1">
-		<convert type="ServiceName">Name</convert>
-	</widget>
-	<widget source="session.CurrentService" foregroundColor="black" render="Label" position="990,50" size="100,30" font="Regular;30" halign="right" backgroundColor="transpWhite" transparent="1">
-		<convert type="ServicePosition">Length</convert>
-	</widget>
-	<widget source="session.CurrentService" foregroundColor="black" render="Label" position="1000,8" size="90,20" zPosition="2" font="Regular;20" halign="right" valign="center" backgroundColor="transpWhite" transparent="1">
-		<convert type="ServicePosition">Remaining</convert>
-	</widget>
-
-	
-	<!-- <ePixmap position="1160,40" size="75,91" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/kino.png"    zPosition="3" transparent="1" alphatest="blend" /> -->
-
-	<!-- HELP GRAPHS -->
-	
-	<ePixmap position="193,113" size="30,30" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/play.png" zPosition="3" transparent="1" alphatest="blend" />
-	<ePixmap position="227,113" size="30,30" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/pause.png" zPosition="3" transparent="1" alphatest="blend" />		
-	<eLabel position="261,117" zPosition="4" size="118,20" halign="center" font="Regular; 18" transparent="1" foregroundColor="white" backgroundColor="iplusPink" text="Play/Pausa" /> 		
-
-	
-	<ePixmap position="429,113" size="30,30" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/blue.png" zPosition="3" transparent="1" alphatest="blend" /> 
-	<widget name="cont_play" position="462,117" zPosition="4" size="152,20" halign="center" font="Regular; 18" transparent="1" foregroundColor="white" backgroundColor="iplusPink" text="" /> 		
-
-	
-	<ePixmap position="663,118" size="25,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/1.png" zPosition="3" transparent="1" alphatest="blend" />
-	<eLabel position="690,124" zPosition="4" size="32,16" halign="center" font="Regular; 14" transparent="1" foregroundColor="white" backgroundColor="iplusPink" text="-10s" /> 		
-
-	<ePixmap position="727,118" size="25,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/4.png" zPosition="3" transparent="1" alphatest="blend" />
-	<eLabel position="753,124" zPosition="4" size="32,16" halign="center" font="Regular; 14" transparent="1" foregroundColor="white" backgroundColor="iplusPink" text="-1m" /> 		
-
-	<ePixmap position="790,118" size="25,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/7.png" zPosition="3" transparent="1" alphatest="blend" />
-	<eLabel position="817,124" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="white" backgroundColor="iplusPink" text="-5m" /> 		
-
-			
-	<ePixmap position="901,118" size="25,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/3.png" zPosition="3" transparent="1" alphatest="blend" />
-	<eLabel position="928,124" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="white" backgroundColor="iplusPink" text="+10s" /> 		
-
-	<ePixmap position="965,118" size="25,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/6.png" zPosition="3" transparent="1" alphatest="blend" />
-	<eLabel position="991,124" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="white" backgroundColor="iplusPink" text="+1m" /> 		
-
-	<ePixmap position="1026,118" size="25,26" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/nStreamVOD/img/9.png" zPosition="3" transparent="1" alphatest="blend" />
-	<eLabel position="1053,124" zPosition="4" size="32,16" halign="center" font="Regular;14" transparent="1" foregroundColor="white" backgroundColor="iplusPink" text="+5m" />
-	
-    <widget source="session.CurrentService" render="Label" zPosition="4" position="27,128" size="55,22" halign="right" font="Regular;22" foregroundColor="black" transparent="1" backgroundColor="transpWhite">
-      <convert type="ServiceInfo">VideoWidth</convert>
-    </widget>
-    <eLabel text="x" zPosition="4" position="88,128" size="15,22" halign="left" font="Regular;22" foregroundColor="black" transparent="1" backgroundColor="transpWhite" />
-    <widget source="session.CurrentService" render="Label" zPosition="4" position="104,128" size="55,22" halign="left" font="Regular;22" foregroundColor="black" transparent="1" backgroundColor="transpWhite">
-      <convert type="ServiceInfo">VideoHeight</convert>
-    </widget>
-    <eLabel name="fcolor" position="176,107" size="921,44" backgroundColor="iplusPink" zPosition="-10" />
-	
-	 		
-	</screen>	
+<screen name="nVODplayer" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="Videoplayer">
+ <widget source="session.CurrentService" render="Label" font="Regular; 19" position="943,559" size="55,25" halign="right" foregroundColor="black" backgroundColor="white" transparent="1">
+    <convert type="ServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" font="Regular; 19" position="998,559" size="15,25" halign="center" foregroundColor="black" backgroundColor="white" transparent="1" />
+  <widget source="session.CurrentService" render="Label" font="Regular; 19" position="1014,559" size="55,25" halign="left" foregroundColor="black" backgroundColor="white" transparent="1">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+  <!-- /*Barramedia-->
+  <eLabel name="new eLabel" position="215,632" size="900,1" backgroundColor="iplusAccent1" foregroundColor="iplusAccent1" zPosition="-1" />
+  <!--Barramedia */-->
+  <!--barra */-->
+  <widget source="session.CurrentService" render="PositionGauge" position="215,628" size="900,9" transparent="1">
+    <convert type="ServicePosition">Gauge</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Progress" foregroundColor="uncd3870" position="215,631" size="900,3" backgroundColor="iplusForeground" borderWidth="0" transparent="1">
+    <convert type="ServicePosition">Position</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="102,615" size="100,28" font="RegularLight; 24" halign="right" valign="center" backgroundColor="iplusBackground" shadowColor="iplusBackground" shadowOffset="-1,-1" transparent="1">
+    <convert type="ServicePosition">Position</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1128,615" size="100,28" font="RegularLight; 24" halign="left" valign="center" backgroundColor="iplusBackground" transparent="1" foregroundColor="white">
+    <convert type="ServicePosition">Remaining</convert>
+  </widget>
+  <!--barra */-->
+  <!--old:-->
+  <widget name="audioLabel" position="831,559" size="100,22" font="Regular; 18" backgroundColor="white" zPosition="3" transparent="1" halign="right" foregroundColor="black" />
+  <!-- Subtitel Label only for DVD -->
+  <ePixmap alphatest="blend" pixmap="openplusHD/icons/flechas.png" position="34,433" size="64,43" zPosition="-30" />
+  <eLabel backgroundColor="white" name="InfoBar" position="141,476" size="1088,136" zPosition="-10" />
+  <ePixmap alphatest="blend" pixmap="openplusHD/icons/play1.png" position="556,433" size="64,43" zPosition="-30" />
+  <eLabel backgroundColor="un42b3" position="98,433" size="458,43" transparent="0" zPosition="-31" />
+  <eLabel backgroundColor="un42b3" position="620,433" size="611,43" transparent="0" zPosition="-31" />
+  <!--  WEATHER WIDGET */ -->
+  <!--/* CHANNEL NAME -->
+  <widget backgroundColor="white" font="Arial; 32" halign="left" position="376,491" render="Label" size="684,40" source="session.CurrentService" transparent="1" valign="top" foregroundColor="black" zPosition="-1">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <!-- CHANNEL NAME */-->
+  <!-- /* STYLE CLASSIC -->
+  <ePixmap alphatest="blend" position="143,478" render="Pixmap" size="220,132" transparent="1" zPosition="5" pixmap="openplusHD/piconmedia.png" />
+  <!--<widget source="session.Event_Now" render="Label" position="286,563" size="805,56" font="RegularLight; 37" halign="left" backgroundColor="iplusBackground" transparent="1" noWrap="1">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+  <widget pixmap="openplusHD/colors/00a61d4d.png" position="288,661" render="Progress" size="943,-39" source="session.Event_Now" transparent="1" zPosition="7">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <!-- STYLE CLASSIC */ -->
+  <!--  /* ClockWidget  -->
+  <!--/* ICONOS INFO -->
+  <widget alphatest="blend" pixmap="openplusHD/icons/ico_rec_on.png" position="767,559" render="Pixmap" size="47,25" source="session.RecordState" zPosition="2">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_dolby_off.png" position="1069,559" size="36,25" zPosition="1" />
+  <widget alphatest="blend" pixmap="openplusHD/icons/ico_dolby_on.png" position="1069,559" render="Pixmap" size="36,25" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_hd_off.png" position="1172,559" size="49,25" zPosition="1" />
+  <widget alphatest="blend" pixmap="openplusHD/icons/ico_hd_on.png" position="1172,559" render="Pixmap" size="49,25" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">721,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="openplusHD/icons/ico_hd_on.png" position="1172,559" render="Pixmap" size="49,25" source="session.CurrentService" zPosition="2">
+    <!--convert type="ServiceInfo">VideoWidth</convert>
+				<convert type="ValueRange">721,1980</convert-->
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_format_off.png" position="1115,559" size="47,25" zPosition="1" />
+  <widget alphatest="blend" pixmap="openplusHD/icons/ico_format_on.png" position="1115,559" render="Pixmap" size="47,25" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- ICONOS INFO */-->
+  <widget backgroundColor="un929292" font="nmsbd2; 25" halign="center" position="1073,58" render="Label" size="158,43" source="global.CurrentTime" transparent="1" valign="center" foregroundColor="white">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="un929292" position="1073,57" size="158,43" transparent="0" zPosition="-23" />
+  <eLabel backgroundColor="transpBlackb" position="98,476" size="43,136" transparent="0" zPosition="-32" />
+  <widget name="chapterLabel" position="628,440" size="596,34" font="Arial; 25" halign="left" foregroundColor="white" backgroundColor="iplusBlue" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="1077,491" size="137,40" font="Arial; 32" halign="right" valign="top" backgroundColor="white" transparent="1" foregroundColor="black">
+    <convert type="ServicePosition">Length</convert>
+  </widget>
+  <eLabel backgroundColor="transpBlackb" position="98,612" size="1133,43" transparent="0" zPosition="-32" />
+	<widget name="state" font="RegularLight; 120" position="341,173" size="584,142" transparent="1" foregroundColor="iplusPreTrans" zPosition="10" borderWidth="0" borderColor="metrixAccent1" halign="center" valign="center" />
+</screen>
 	
 	<screen name="SelectQuality" position="center,center" size="412,349" backgroundColor="white" flags="wfBorder" title="Episode selector">
 		<widget name="menulabel" position="41,30" zPosition="1" size="332,24" halign="center" font="Regular; 22" transparent="1" foregroundColor="black" backgroundColor="white" /> 
@@ -2673,7 +2682,7 @@
 						MultiContentEntryProgress(pos = (880, 1), size = (100, 28), percent = -3), # index 3 should be progress
 						MultiContentEntryText(pos = (990, 1), size = (60, 28), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
 					],
-				"fonts": [gFont("Regular", 26),gFont("Regular", 22)],
+				"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
 				"itemHeight": 30
 				}
 			</convert>
