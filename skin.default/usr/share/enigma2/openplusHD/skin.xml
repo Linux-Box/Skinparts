@@ -1,5 +1,5 @@
 <skin>
-  <!-- openplusHD v0.2 by Tañha ro & VillaK for Open+ -->
+  <!-- openplusHD v0.2 by VillaK  & Tañha ro  for OpenPlus -->
   <!-- You can modify and redistribute it as long as you keep this License and the original author for the skin and all of your modifications -->
   <include filename="/usr/share/enigma2/openplusHD/skin_plugins.xml" />
   <include filename="/usr/share/enigma2/openplusHD/skin_channelsel.xml" />
@@ -994,23 +994,23 @@
     <eLabel position="320,640" size="901,50" transparent="0" foregroundColor="white" backgroundColor="un929292" zPosition="-2" />
     <!--finestructura menu/-->
   </screen>
-  <screen name="AudioSelection" position="center,0" size="1280,720" transparent="0" backgroundColor="transparent">
-    <widget name="config" position="222,275" size="420,233" foregroundColor="white" backgroundColor="un5395c3" transparent="1" scrollbarMode="showOnDemand" zPosition="-2" />
-    <widget source="key_red" render="Pixmap" pixmap="buttons/red1.png" position="187,277" size="25,25" alphatest="blend" zPosition="1">
+ <screen name="AudioSelection" position="center,center" size="1280,720" transparent="0" backgroundColor="transparent">
+    <widget name="config" position="227,305" size="573,233" foregroundColor="white" backgroundColor="un5395c3" transparent="1" scrollbarMode="showOnDemand" zPosition="-2" />
+    <widget source="key_red" render="Pixmap" pixmap="buttons/red1.png" position="177,307" size="25,25" alphatest="blend" zPosition="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="key_green" render="Pixmap" pixmap="buttons/green1.png" position="187,302" size="25,25" alphatest="blend" zPosition="1">
+    <widget source="key_green" render="Pixmap" pixmap="buttons/green1.png" position="177,332" size="25,25" alphatest="blend" zPosition="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="key_yellow" render="Pixmap" pixmap="buttons/yellow1.png" position="187,327" size="25,25" alphatest="blend" zPosition="1">
+    <widget source="key_yellow" render="Pixmap" pixmap="buttons/yellow1.png" position="177,357" size="25,25" alphatest="blend" zPosition="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="key_blue" render="Pixmap" pixmap="buttons/blue1.png" position="187,352" size="25,25" alphatest="blend" zPosition="1">
+    <widget source="key_blue" render="Pixmap" pixmap="buttons/blue1.png" position="177,382" size="25,25" alphatest="blend" zPosition="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap pixmap="openplusHD/icons/logoaudio.png" zPosition="-3" position="555,44" size="212,212" alphatest="blend" />
-    <eLabel position="468,513" size="20,80" transparent="0" zPosition="-1" backgroundColor="black" foregroundColor="black" />
-    <widget source="streams" render="Listbox" position="428,534" size="525,150" itemHeight="52" transparent="1" zPosition="4" foregroundColorSelected="white" foregroundColor="white" backgroundColorSelected="unf421a7" backgroundColor="black">
+    <ePixmap pixmap="openplusHD/icons/logoaudio.png" zPosition="-3" position="661,21" size="212,212" alphatest="blend" />
+    <eLabel position="543,528" size="20,80" transparent="0" zPosition="-1" backgroundColor="black" foregroundColor="black" />
+    <widget source="streams" render="Listbox" position="528,549" size="525,150" itemHeight="52" transparent="1" zPosition="4" foregroundColorSelected="white" foregroundColor="unffa500" backgroundColorSelected="unf421a7" backgroundColor="black">
       <convert type="TemplatedMultiContent">
 				{"templates":
 				{"default": (25, [
@@ -1033,11 +1033,14 @@
 				}
 			</convert>
     </widget>
-    <eLabel position="600,253" size="20,80" transparent="0" zPosition="-10" backgroundColor="unf421a7" />
-    <eLabel position="159,474" size="80,20" transparent="0" zPosition="-14" backgroundColor="un5395c3" />
-    <eLabel position="177,266" size="480,261" transparent="0" zPosition="-9" backgroundColor="un5395c3" foregroundColor="black" />
-    <eLabel position="415,527" size="550,160" transparent="0" zPosition="-3" backgroundColor="black" foregroundColor="black" />
-  </screen>
+    <eLabel position="698,213" size="20,80" transparent="0" zPosition="-10" backgroundColor="unf421a7" />
+    <eLabel position="119,500" size="80,20" transparent="0" zPosition="-14" backgroundColor="un5395c3" />
+    <eLabel position="137,244" size="678,298" transparent="0" zPosition="-9" backgroundColor="un5395c3" foregroundColor="black" />
+    <eLabel position="515,542" size="550,160" transparent="0" zPosition="-3" backgroundColor="black" foregroundColor="black" />
+  <widget name="switchdescription" position="242,258" size="559,25" font="Regular; 20" foregroundColor="white" backgroundColor="un5395c3" transparent="1" />
+<widget name="key_left" pixmap="openplusHD/left.png" position="148,253" size="36,36" alphatest="blend" />
+<widget name="key_right" pixmap="openplusHD/right.png" position="195,253" size="36,36" alphatest="blend" />
+</screen>
   <screen name="clockDisplay" position="center,center" size="300,300" backgroundColor="white">
     <widget name="okbutton" position="10,25" size="280,40" transparent="0" />
     <widget name="title" position="10,145" size="280,50" transparent="0" />
@@ -3648,7 +3651,7 @@
     <widget name="sublist" position="445,120" size="394,408" itemHeight="50" scrollbarMode="shownever" transparent="0" backgroundColor="white" foregroundColor="black" />
     <widget name="description" position="40,562" size="1212,74" zPosition="1" font="Regular;22" halign="center" valign="center" backgroundColor="un1eebeb" transparent="0" foregroundColor="black" />
     <widget source="session.VideoPicture" render="Pig" position="858,104" size="388,228" backgroundColor="transparent" zPosition="-1" transparent="0" />
-    <eLabel position="0,0" size="1280,60" font="Regular; 35" backgroundColor="black" transparent="0" foregroundColor="white" zPosition="-2" name="  " text="  Quick Launch Menu" />
+    <eLabel position="0,0" size="1280,60" font="Regular; 35" backgroundColor="black" transparent="0" foregroundColor="white" zPosition="-2" name="  " text="  Menú de inicio rápido" />
     <eLabel position="426,139" size="28,18" font="RegularLight; 35" backgroundColor="white" transparent="0" foregroundColor="white" zPosition="-12" />
     <eLabel position="349,548" size="18,20" font="RegularLight; 35" backgroundColor="un1eebeb" transparent="0" foregroundColor="white" zPosition="-6" />
     <eLabel position="836,304" size="28,18" font="RegularLight; 35" backgroundColor="unf421a7" transparent="0" foregroundColor="white" zPosition="-12" />
@@ -4664,7 +4667,7 @@ self.autoResize()
   <widget source="TranslatorName" render="Label" position="10,55" size="400,30" font="Regular;20" foregroundColor="black" backgroundColor="white" />
   <widget source="TranslationInfo" render="Label" position="10,102" size="400,250" font="Regular;20" backgroundColor="white" foregroundColor="black" />
 <eLabel font="Regular;18" position="10,266" render="Label" size="400,28" text="Equipo de traducción de Plugins:" valign="top" zPosition="1" foregroundColor="unffa500" />
-<eLabel font="Regular;18" foregroundColor="black" position="10,296" render="Label" size="400,109" text="Joannnn, Orerivia, Xavi220, VillaK." valign="top" zPosition="1" backgroundColor="white" />
+<eLabel font="Regular;18" foregroundColor="black" position="10,296" render="Label" size="400,109" text="Jglez3, Orerivia, Xavi220, VillaK." valign="top" zPosition="1" backgroundColor="white" />
 <eLabel backgroundColor="darkgrey" position="-56,238" size="560,2" zPosition="1" />
 </screen>
   <screen name="WlanScan" position="0,0" size="1280,720" title="Choose a Wireless Network" flags="wfNoBorder" backgroundColor="transparent">
@@ -5273,7 +5276,7 @@ self.autoResize()
   <widget name="wizard" position="337,159" size="284,174" pixmap="openplusHD/skin_default/wizard1.png" zPosition="10" transparent="1" alphatest="blend" />
   <widget name="languagetext" position="437,343" size="150,30" font="RegularLight; 20" backgroundColor="black" transparent="0" halign="center" valign="top" />
   <widget name="text" position="641,159" size="539,300" font="RegularLight; 22" backgroundColor="transpBlackdef" transparent="0" foregroundColor="white" halign="center" />
-  <widget source="list" render="Listbox" position="339,474" size="841,165" zPosition="0" foregroundColor="black" backgroundColor="un71b6e5" scrollbarMode="showNever" transparent="0">
+  <widget source="list" render="Listboxlb" position="339,474" size="841,165" zPosition="0" foregroundColor="black" backgroundColor="un71b6e5" scrollbarMode="showNever" transparent="0">
     <convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos = (20, 2), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
 				"fonts": [gFont("Regular", 22)],
