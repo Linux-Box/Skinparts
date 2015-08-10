@@ -4284,31 +4284,52 @@ self.autoResize()
     <!--finestructura menu/-->
     <!--fin estructuramenu/-->
   </screen>
-  <screen name="SoftwarePanel" position="center,70" size="727,620" title="SoftwarePanel" flags="wfBorder" backgroundColor="white">
-    <widget name="packagetext" position="15,21" size="250,35" zPosition="1" font="Regular;25" halign="right" backgroundColor="white" transparent="1" foregroundColor="black" />
-    <widget name="packagenr" position="271,21" size="50,35" zPosition="1" font="Regular;25" halign="right" backgroundColor="white" transparent="1" foregroundColor="green" />
-    <widget source="list" render="Listbox" position="14,64" size="700,416" itemHeight="55" scrollbarMode="showNever" backgroundColor="white" foregroundColor="black" transparent="1">
+  <screen name="SoftwarePanel" position="center,center" size="1280,720" title="SoftwarePanel" flags="wfNoBorder" backgroundColor="transparent" transparent="0">
+<ePixmap position="797,223" zPosition="-1" size="358,360" pixmap="/usr/share/enigma2/openplusHD/update.png" transparent="1" alphatest="blend" />
+<eLabel position="center,31" size="1109,68" transparent="0" foregroundColor="white" backgroundColor="un42b3" zPosition="-9" />
+<eLabel text="SOFTWARE PANEL" position="67,34" size="430,65" font="Regular; 42" halign="center" transparent="1" foregroundColor="white" backgroundColor="un42b3" />
+<eLabel position="105,178" size="655,421" zPosition="-9" transparent="0" foregroundColor="white" backgroundColor="un929292" />
+<eLabel position="center,center" size="1109,656" zPosition="-15" transparent="0" foregroundColor="white" backgroundColor="white" />
+
+    <widget name="packagetext" position="455,123" size="250,35" zPosition="1" font="Regular;25" halign="right" backgroundColor="white" transparent="1" foregroundColor="black" />
+    <widget name="packagenr" position="709,123" size="50,35" zPosition="1" font="Regular;25" halign="right" backgroundColor="white" transparent="1" foregroundColor="green" />
+
+    <widget source="list" render="Listboxlb" position="105,178" size="655,416" itemHeight="55" scrollbarMode="showNever" backgroundColor="un929292" foregroundColor="black" transparent="1">
       <convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryText(pos = (5, 1), size = (590, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (5, 26), size = (590, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-						MultiContentEntryPixmapAlphaBlend(pos = (605, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 50), size = (700, 2), png = 5), # index 5 is the div pixmap
-					],
-				"fonts": [gFont("Regular",22),gFont("Regular",16)],
-				"itemHeight": 52
-				}
-			</convert>
+    {"template": [
+      MultiContentEntryText(pos = (5, 1), size = (590, 28), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+      MultiContentEntryText(pos = (5, 26), size = (590, 20), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+      MultiContentEntryPixmapAlphaBlend(pos = (605, 2), size = (48, 48), png = 4), # index 4 is the status pixmap
+      MultiContentEntryPixmapAlphaBlend(pos = (0, 50), size = (700, 2), png = 5), # index 5 is the div pixmap
+     ],
+    "fonts": [gFont("Regular",22),gFont("Regular",16)],
+    "itemHeight": 52
+    }
+   </convert>
     </widget>
-    <widget name="a_off" position="15,501" zPosition="1" size="36,97" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" alphatest="on" />
-    <widget name="a_red" position="15,501" zPosition="1" size="36,97" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" alphatest="on" />
-    <widget name="a_yellow" position="15,501" zPosition="1" size="36,97" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" alphatest="on" />
-    <widget name="a_green" position="15,501" zPosition="1" size="36,97" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" alphatest="on" />
-    <widget name="feedstatusRED" position="65,501" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="black" backgroundColor="white" transparent="1" />
-    <widget name="feedstatusYELLOW" position="65,534" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="black" backgroundColor="white" transparent="1" />
-    <widget name="feedstatusGREEN" position="65,567" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="black" backgroundColor="white" transparent="1" />
-    <widget source="key_red" render="Label" position="348,557" zPosition="1" size="180,40" font="Regular;20" halign="center" valign="center" backgroundColor="red" transparent="0" />
-    <widget source="key_green" render="Label" position="537,557" zPosition="1" size="180,40" font="Regular;20" halign="center" valign="center" backgroundColor="green" transparent="0" />
+<eLabel position="551,627" size="30,30" transparent="0" foregroundColor="white" backgroundColor="#11b90a" zPosition="-1" />
+<eLabel position="317,627" size="30,30" transparent="0" foregroundColor="white" backgroundColor="#ee1d11" zPosition="-1" />
+    <widget name="a_off" position="105,113" zPosition="1" size="53,53" pixmap="/usr/share/enigma2/openplusHD/icons/input_error.png" alphatest="on" />
+    <widget name="a_red" position="105,113" zPosition="1" size="53,53" pixmap="/usr/share/enigma2/openplusHD/icons/input_error.png" alphatest="on" />
+    <widget name="a_yellow" position="105,113" zPosition="1" size="53,53" pixmap="/usr/share/enigma2/openplusHD/icons/input_warning.png" alphatest="on" />
+    <widget name="a_green" position="105,113" zPosition="1" size="53,53" pixmap="/usr/share/enigma2/openplusHD/icons/input_info.png" alphatest="on" />
+    <widget name="feedstatusRED" position="170,124" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="black" backgroundColor="white" transparent="1" />
+    <widget name="feedstatusYELLOW" position="170,124" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="black" backgroundColor="white" transparent="1" />
+    <widget name="feedstatusGREEN" position="170,124" size="200,30" zPosition="1" font="Regular;25" halign="left" foregroundColor="black" backgroundColor="white" transparent="1" />
+    <widget source="key_red" render="Label" position="347,627" zPosition="1" size="180,30" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="0" />
+    <widget source="key_green" render="Label" position="581,627" zPosition="1" size="180,30" font="Regular;20" halign="center" valign="center" backgroundColor="black" transparent="0" />
+  </screen>
+  <screen name="UpdatePlugin" position="center,center" size="1280,720" title="Software Update..." flags="wfNoBorder" backgroundColor="transparent" transparent="0">
+<ePixmap position="797,223" zPosition="-1" size="358,360" pixmap="/usr/share/enigma2/openplusHD/update.png" transparent="1" alphatest="blend" />
+<eLabel position="center,31" size="1109,68" transparent="0" foregroundColor="white" backgroundColor="un42b3" zPosition="-9" />
+<eLabel text="SOFTWARE PANEL" position="67,34" size="430,65" font="Regular; 42" halign="center" transparent="1" foregroundColor="white" backgroundColor="un42b3" />
+<eLabel position="105,138" size="655,501" zPosition="-9" transparent="0" foregroundColor="white" backgroundColor="un929292" />
+<eLabel position="center,center" size="1109,656" zPosition="-15" transparent="0" foregroundColor="white" backgroundColor="white" />
+<widget name="activityslider" position="110,189" size="645,30" borderColor="grey" foregroundColor="iplusPink" borderWidth="2" transparent="0" backgroundColor="black" />
+<widget source="package" render="Label" position="110,263" size="645,40" font="Regular;20" backgroundColor="un929292" foregroundColor="white" transparent="1" />    
+ <widget source="status" render="Label" position="110,477" size="645,40" font="Regular;20" backgroundColor="un929292" foregroundColor="white" transparent="1" />   
+<widget name="slider" position="110,556" size="645,30" borderColor="grey" foregroundColor="iplusPink" borderWidth="2" transparent="0" backgroundColor="black" />
+ 
   </screen>
   <screen name="Standby" position="0,0" size="1280,720" title="Standby" flags="wfNoBorder" />
   <screen name="SubservicesQuickzap" position="380,600" size="560,100" title="Subservices" flags="wfNoBorder" backgroundColor="transparent">
