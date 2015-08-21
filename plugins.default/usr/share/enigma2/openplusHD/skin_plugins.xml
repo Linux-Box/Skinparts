@@ -297,7 +297,7 @@
     <widget name="key_red" position="105,638" size="240,24" zPosition="1" font="RegularLight;20" halign="left" foregroundColor="black" backgroundColor="white" transparent="1" />
     <widget name="thumbnail" position="452,245" size="170,130" alphatest="blend" /> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
 </screen>
-	<!-- AutoTimer -->
+<!-- AutoTimer -->
 <screen name="AutoTimerWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
     <widget name="text" position="525,191" size="587,200" valign="center" halign="center" zPosition="5" font="Regular; 19" foregroundColor="white" backgroundColor="unf81212" transparent="0" />
     <widget source="list" render="Listbox" position="525,405" size="640,180" zPosition="5" foregroundColor="iplusAccent2" backgroundColor="un6e6e6e" backgroundColorSelected="#fd6502" transparent="0" scrollbarMode="showOnDemand">
@@ -347,7 +347,7 @@
     <eLabel text="CANCELAR" position="545,540" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
     <eLabel position="510,540" size="35,35" transparent="0" foregroundColor="white" backgroundColor="unee1d11" zPosition="-1" />
     <!-- amarillo -->
-    <eLabel position="546,590" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
+    <eLabel position="546,590" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" text="&lt;&lt;&lt;" />
     <eLabel position="510,590" size="35,35" transparent="0" foregroundColor="white" backgroundColor="uneefb1a" zPosition="-1" />
     <!-- verde -->
     <eLabel position="835,540" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
@@ -625,7 +625,7 @@
     <widget name="entries" zPosition="3" position="510,190" size="710,297" itemHeight="30" scrollbarMode="showNever" enableWrapAround="1" backgroundColor="und6d6d6" foregroundColor="black" backgroundColorSelected="#fd6502" foregroundColorSelected="white" transparent="1" />
     <eLabel text="Pulse añadir y accedera a la lista canales simple, seleccione evento a grabar" position="510,490" size="710,30" font="Regular; 20" foregroundColor="un707070" halign="left" backgroundColor="und6d6d6" valign="center" transparent="1" />
     <!-- colores keys -->
-    <eLabel position="545,540" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
+    <eLabel position="545,540" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" text="CERRAR" />
     <eLabel position="510,540" size="35,35" transparent="0" foregroundColor="white" backgroundColor="unee1d11" zPosition="-1" />
     <eLabel text="BORRAR" position="545,590" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
     <eLabel position="510,590" size="35,35" transparent="0" foregroundColor="white" backgroundColor="uneefb1a" zPosition="-1" />
