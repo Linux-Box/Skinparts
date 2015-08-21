@@ -298,15 +298,15 @@
     <widget name="thumbnail" position="452,245" size="170,130" alphatest="blend" /> # fake entry for dynamic thumbnail resizing, currently there is no other way doing this.
 </screen>
 	<!-- AutoTimer -->
-  <screen name="AutoTimerWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="text" position="525,191" size="440,200" valign="center" halign="center" zPosition="5" font="Regular;22" foregroundColor="white" backgroundColor="unf81212" transparent="0" />
-    <widget source="list" render="Listbox" position="525,400" size="640,180" zPosition="5" foregroundColor="iplusAccent2" backgroundColor="un6e6e6e" backgroundColorSelected="#fd6502" transparent="0" scrollbarMode="showOnDemand">
+<screen name="AutoTimerWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="text" position="525,191" size="587,200" valign="center" halign="center" zPosition="5" font="Regular; 19" foregroundColor="white" backgroundColor="unf81212" transparent="0" />
+    <widget source="list" render="Listbox" position="525,405" size="640,180" zPosition="5" foregroundColor="iplusAccent2" backgroundColor="un6e6e6e" backgroundColorSelected="#fd6502" transparent="0" scrollbarMode="showOnDemand">
       <convert type="StringList" />
     </widget>
-    <widget name="config" position="525,400" backgroundColorSelected="#fd6502" foregroundColor="iplusAccent2" backgroundColor="un6e6e6e" zPosition="5" size="640,180" transparent="1" scrollbarMode="showOnDemand" />
-    <widget name="languagetext" foregroundColor="white" zPosition="5" position="948,594" size="95,30" font="Regular;18" backgroundColor="black" />
-    <eLabel position="945,590" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
-    <eLabel position="910,590" size="35,35" transparent="0" foregroundColor="white" backgroundColor="unee1d11" zPosition="-1" />
+    <widget name="config" position="525,405" backgroundColorSelected="#fd6502" foregroundColor="iplusAccent2" backgroundColor="un6e6e6e" zPosition="5" size="640,180" transparent="1" scrollbarMode="showOnDemand" />
+    <widget name="languagetext" foregroundColor="white" zPosition="5" position="963,599" size="95,30" font="Regular;18" backgroundColor="black" />
+    <eLabel position="945,595" size="200,35" font="Regular;25" valign="center" halign="center" backgroundColor="black" foregroundColor="white" transparent="0" />
+    <eLabel position="910,595" size="35,35" transparent="0" foregroundColor="white" backgroundColor="unee1d11" zPosition="-1" />
     <eLabel position="550,370" size="20,90" transparent="0" foregroundColor="white" backgroundColor="unf81212" zPosition="-1" />
     <eLabel position="1000,530" size="20,90" transparent="0" foregroundColor="white" backgroundColor="black" zPosition="-1" />
     <!--estructura menu/-->
