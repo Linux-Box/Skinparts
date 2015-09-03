@@ -282,19 +282,20 @@
     <eLabel text="Pulse Ok para escoger opción" position="748,580" size="416,50" font="RegularLight; 23" zPosition="2" halign="left" noWrap="1" transparent="1" foregroundColor="black" backgroundColor="un1debeb" />
   </screen>
   <!-- Ecm Info -->
-  <screen name="EcmInfoScreen" flags="wfBorder" position="600,150" size="600,80" zPosition="1" backgroundColor="white" title="ECMInfo">
-    <eLabel backgroundColor="un6e6e6e" position="1,6" size="600,80" zPosition="0" />
-    <widget name="irdeto" position="149,14" size="18, 25" font="RegularLight;16" text="I" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" />
-    <widget name="seca" position="172,14" size="18, 25" font="RegularLight;16" text="S" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" />
-    <widget name="nagra" position="217,14" size="18, 25" font="RegularLight;16" text="N" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" />
-    <widget name="via" position="195,14" size="18, 25" font="RegularLight;16" text="V" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" />
-    <widget name="conax" position="239,14" size="34,25" font="RegularLight;16" text="CO" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" />
-    <widget name="betacrypt" position="277,14" size="38, 25" font="RegularLight;16" text="BC" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" />
-    <widget name="crypto" position="319,14" size="38, 25" font="RegularLight;16" text="CW" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" />
-    <widget name="dreamcrypt" position="361,14" size="38, 25" font="RegularLight;16" text="DC" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" />
-    <widget name="nds" position="403,14" size="45, 25" font="RegularLight;16" text="NDS" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" />
-    <widget name="ecmInfo" position="8,48" size="585,30" font="RegularLight; 16" valign="center" noWrap="1" zPosition="3" halign="center" transparent="1" backgroundColor="transpBlack" foregroundColor="white" />
-  </screen>
+  <screen name="EcmInfoScreen" flags="wfNoBorder" position="center,center" size="604,84" zPosition="1" backgroundColor="transpBlack1" title="ECMInfo" transparent="0">
+  <eLabel backgroundColor="un6e6e6e" position="9,11" size="229,25" zPosition="3" transparent="1" text="CCCAM INFO OPENPLUS" foregroundColor="unffa500" font="RegularLight; 18" halign="center" />
+  <widget name="irdeto" position="249,11" size="18,25" font="Regular; 16" text="I" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" backgroundColor="un6e6e6e" />
+  <widget name="seca" position="274,11" size="18, 25" font="Regular; 16" text="S" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" backgroundColor="un6e6e6e" />
+  <widget name="nagra" position="324,11" size="18, 25" font="Regular; 16" text="N" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" backgroundColor="un6e6e6e" />
+  <widget name="via" position="299,11" size="18, 25" font="Regular; 16" text="V" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" backgroundColor="un6e6e6e" />
+  <widget name="conax" position="350,11" size="34,25" font="Regular; 16" text="CO" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" backgroundColor="un6e6e6e" />
+  <widget name="betacrypt" position="392,11" size="38, 25" font="Regular; 16" text="BC" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" backgroundColor="un6e6e6e" />
+  <widget name="crypto" position="438,11" size="38, 25" font="Regular; 16" text="CW" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" backgroundColor="un6e6e6e" />
+  <widget name="dreamcrypt" position="484,11" size="38, 25" font="Regular; 16" text="DC" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" backgroundColor="un6e6e6e" />
+  <widget name="nds" position="531,11" size="45, 25" font="Regular; 16" text="NDS" valign="center" halign="center" zPosition="3" transparent="1" foregroundColor="iplusForeground" backgroundColor="un6e6e6e" />
+  <widget name="ecmInfo" position="8,47" size="588,30" font="RegularLight; 14" valign="center" noWrap="1" zPosition="3" halign="center" transparent="1" backgroundColor="un6e6e6e" foregroundColor="white" />
+  <eLabel backgroundColor="un6e6e6e" position="2,2" size="600,80" zPosition="0" />
+</screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Volume" position="800,554" size="400,50" title="Volume">
     <widget name="Volume" pixmap="openplusHD/colors/00a61d4d.png" position="132,11" size="170,30" transparent="1" zPosition="3" />
     <ePixmap alphatest="blend" pixmap="openplusHD/icons/volumen1.png" position="11,14" size="63,25" transparent="0" zPosition="1" />
