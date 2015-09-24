@@ -1,0 +1,503 @@
+<skin>
+<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1280,720" title="InfoBar">
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/flechas.png" position="34,433" size="64,43" zPosition="-30" />
+    <eLabel backgroundColor="white" name="InfoBar" position="141,476" size="1090,136" zPosition="-10" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/barrahor1.png" position="98,612" size="525,43" backgroundColor="black" zPosition="-30" transparent="1" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/play1.png" position="516,433" size="64,43" zPosition="-30" />
+    <widget font="nmsbd2; 25" foregroundColor="white" noWrap="1" position="108,57" render="Label" size="436,43" source="session.CurrentService" transparent="1" valign="center" zPosition="0" backgroundColor="un929292">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+<eLabel backgroundColor="un929292" position="98,57" size="458,43" transparent="0" zPosition="-23" />
+    <eLabel backgroundColor="un42b3" position="98,433" size="458,43" transparent="0" zPosition="-31" />
+    <eLabel backgroundColor="un42b3" position="580,433" size="651,43" transparent="0" zPosition="-31" />
+    <!--  WEATHER WIDGET */ -->
+    <!--/* CHANNEL NAME -->
+    <widget backgroundColor="un42b3" font="Regular; 30" halign="left" position="119,433" render="Label" size="327,43" source="session.CurrentService" transparent="1" valign="top" foregroundColor="white" zPosition="-1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <!-- CHANNEL NAME */-->
+    <!-- /* STYLE CLASSIC -->
+    <widget alphatest="blend" position="143,478" render="LBPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <!--<widget source="session.Event_Now" render="Label" position="286,563" size="805,56" font="RegularLight; 37" halign="left" backgroundColor="iplusBackground" transparent="1" noWrap="1">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget font="Regular; 26" foregroundColor="white" noWrap="1" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" position="587,436" render="RunningText" size="500,43" source="session.Event_Now" transparent="1" backgroundColor="un42b3" zPosition="0">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="un42b3" font="Regular; 26" halign="right" position="1092,436" render="Label" size="127,43" source="session.Event_Now" transparent="1" foregroundColor="white">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget pixmap="openplusHD/colors/00a61d4d.png" position="288,661" render="Progress" size="943,-39" source="session.Event_Now" transparent="1" zPosition="7">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget font="Arial; 25" foregroundColor="un585858" halign="right" position="349,495" render="Label" size="125,30" source="session.Event_Next" transparent="1" valign="top" backgroundColor="white">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel font="Arial; 25" foregroundColor="un585858" halign="center" position="481,495" size="15,30" text="&gt;" transparent="1" valign="top" backgroundColor="white" />
+    <widget font="Arial; 25" foregroundColor="un585858" halign="left" position="502,495" render="Label" size="85,30" source="session.Event_Next" transparent="1" valign="top" backgroundColor="white">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <!--<widget source="session.Event_Next" render="Label" position="441,624" size="670,40" font="Regular; 24" halign="left" backgroundColor="iplusBackground" transparent="1" foregroundColor="iplusAccent1" valign="top">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget backgroundColor="white" font="Arial; 25" foregroundColor="un585858" halign="left" position="587,495" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" render="RunningText" size="500,30" source="session.Event_Next" transparent="1" valign="top">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget font="Arial; 25" foregroundColor="un585858" halign="right" position="1092,495" render="Label" size="127,30" source="session.Event_Next" transparent="1" backgroundColor="white" valign="top">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <!-- STYLE CLASSIC */ -->
+    <!--  /* ClockWidget  -->
+    <!--/* ICONOS INFO -->
+    
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_line_off.png" position="747,559" size="47,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_rec_on.png" position="747,559" render="Pixmap" size="47,25" source="session.RecordState" zPosition="2">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/subtitle_off.png" position="876,559" size="50,25" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/subtitle_on.png" position="876,559" render="Pixmap" size="50,25" source="session.CurrentService" zPosition="1">
+      <convert type="ServiceInfo">SubservicesAvailable</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_line_off.png" position="801,559" size="68,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_hbbtv_on.png" position="801,559" render="Pixmap" size="68,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">HasHBBTV</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_txt_off.png" position="932,559" size="32,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_txt_on.png" position="932,559" render="Pixmap" size="32,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">HasTelext</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_dolby_off.png" position="969,559" size="36,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_dolby_on.png" position="969,559" render="Pixmap" size="36,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">IsMultichannel</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_hd_off.png" position="1172,559" size="49,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_hd_on.png" position="1172,559" render="Pixmap" size="49,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">VideoWidth</convert>
+      <convert type="ValueRange">721,1980</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_hd_on.png" position="1172,559" render="Pixmap" size="49,25" source="session.CurrentService" zPosition="2">
+      <!--convert type="ServiceInfo">VideoWidth</convert>
+				<convert type="ValueRange">721,1980</convert-->
+      <convert type="ServiceInfo">IsHD</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_format_off.png" position="1054,559" size="47,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_format_on.png" position="1054,559" render="Pixmap" size="47,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">IsWidescreen</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_crypt_off.png" position="1010,559" size="39,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_crypt_on.png" position="1010,559" render="Pixmap" size="39,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">IsCrypted</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- ICONOS INFO */-->
+    <!-- /* TUNERTYPE -->
+    <ePixmap alphatest="blend" pixmap="openplusHD/nada.png" position="1106,559" size="60,25" zPosition="0" />
+    <widget source="session.FrontendInfo" alphatest="blend" render="Pixmap" pixmap="openplusHD/icons/sat.png" position="1106,559" size="60,25" transparent="0" zPosition="2">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">0,0</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/nada.png" position="1106,559" size="60,25" zPosition="0" />
+    <widget source="session.FrontendInfo" alphatest="blend" render="Pixmap" pixmap="openplusHD/icons/cable.png" position="1106,559" size="60,25" transparent="0" zPosition="2">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">1,1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/nada.png" position="1106,559" size="60,25" zPosition="0" />
+    <widget source="session.FrontendInfo" alphatest="blend" render="Pixmap" pixmap="openplusHD/icons/tdt.png" position="1106,559" size="60,25" transparent="0" zPosition="2">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">2,2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/nada.png" position="1106,559" size="60,25" zPosition="0" />
+    <widget source="session.FrontendInfo" alphatest="blend" render="Pixmap" pixmap="openplusHD/icons/atsc.png" position="1106,559" size="60,25" transparent="0" zPosition="2">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">3,3</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+<widget backgroundColor="iplusBackground" halign="center" render="Pixmap" pixmap="openplusHD/icons/iptv.png" position="1106,559" size="60,25" source="session.CurrentService" text="DVB-S2" transparent="1" valign="top" zPosition="1" foregroundColor="iplusBackground">
+<convert type="ServiceName2">%s</convert>
+</widget>
+
+    <!-- TUNERTYPE */-->
+    <eLabel backgroundColor="black" foregroundColor="black" position="413,559" size="233,25" />
+    <widget backgroundColor="iplusBackground" borderWidth="0" pixmap="openplusHD/colors/00a61d4d.png" position="413,559" render="Progress" size="233,25" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget backgroundColor="un929292" font="nmsbd2; 25" halign="center" position="432,57" render="Label" size="158,43" source="global.CurrentTime" transparent="1" valign="center" foregroundColor="white">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    
+    <widget source="session.CurrentService" render="Label" position="440,433" size="69,43" font="Regular; 31" valign="top" halign="right" transparent="1" foregroundColor="white" zPosition="0" backgroundColor="un42b3">
+      <convert type="ExtendedServiceInfo">ServiceNumber</convert>
+    </widget>
+    <eLabel backgroundColor="transpBlackb" position="98,612" size="525,43" transparent="0" zPosition="-32" />
+    
+    <widget name="key_red" position="105,800" size="240,30" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="black" foregroundColor="black" transparent="1" />
+    <widget name="key_green" position="395,800" size="240,30" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="black" foregroundColor="black" transparent="1" />
+    <widget name="key_yellow" position="685,800" size="240,30" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="black" foregroundColor="black" transparent="1" />
+    <widget name="key_blue" position="975,800" size="240,30" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="black" foregroundColor="black" transparent="1" />
+ 
+<eLabel backgroundColor="transpBlackb" position="98,476" size="43,136" transparent="0" zPosition="-32" />
+<widget font="RegularLight; 30" foregroundColor="unffa500" halign="center" position="1105,45" render="Label" size="96,40" source="session.CurrentService" transparent="1" zPosition="2" valign="center">
+    <convert type="YWeather">temp</convert>
+  </widget>
+  <widget font="Regular; 16" foregroundColor="white" halign="left" position="1113,78" render="Label" size="300,23" source="session.CurrentService" transparent="1" zPosition="2">
+    <convert type="YWeather">city</convert>
+  </widget>
+ <widget alphatest="blend" path="piconYWeather" position="1044,47" render="PiconUni" size="73,73" source="session.CurrentService" zPosition="2">
+    <convert type="YWeather">picon</convert>
+  </widget>
+</screen>
+  <screen name="SecondInfoBar" position="center,center" size="1280,720" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel backgroundColor="transpBlackb" position="center,0" size="1280,30" transparent="0" zPosition="-99" />
+    <eLabel backgroundColor="transpBlack" position="98,116" size="550,317" transparent="0" zPosition="-23" />
+    <eLabel backgroundColor="transpBlack" position="681,143" size="550,264" transparent="0" zPosition="-23" />
+    <eLabel backgroundColor="un929292" position="98,57" size="458,43" transparent="0" zPosition="-23" />
+    <!-- descripcion canales extendida */-->
+    <widget backgroundColor="black" foregroundColor="white" font="Regular; 21" halign="left" options="movetype=running,direction=top,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=2,oneshot=1" position="118,125" render="RunningText" size="510,298" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventName">FullDescription</convert>
+    </widget>
+    <widget backgroundColor="black" foregroundColor="white" font="Regular; 20" halign="left" position="701,153" options="movetype=running,direction=top,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=2,oneshot=1" render="RunningText" size="510,244" source="session.Event_Next" transparent="1" zPosition="1">
+      <convert type="EventName">FullDescription</convert>
+    </widget>
+    <!-- find descripcio canales extendida */-->
+    <widget source="session.CurrentService" position="535,4" size="622,21" render="Label" font="Regular; 15" halign="right" valign="center" backgroundColor="black" foregroundColor="white" transparent="2" noWrap="1">
+      <convert type="openplusHDChannelCryptoInfo">Default</convert>
+    </widget>
+    <!-- TUNERTYPE */-->
+    <eLabel text="SINT:" position="32,4" size="40,21" font="Regular; 16" foregroundColor="white" backgroundColor="black" transparent="1" />
+    <eLabel backgroundColor="black" font="Regular;16" foregroundColor="white" halign="center" position="71,4" size="14,20" text="A" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="black" font="Regular;16" foregroundColor="white" halign="center" position="85,4" size="14,20" text="B" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="black" font="Regular;16" foregroundColor="white" halign="center" position="99,4" size="14,20" text="C" transparent="1" zPosition="1" />
+    <eLabel backgroundColor="black" font="Regular;16" foregroundColor="white" halign="center" position="113,4" size="14,20" text="D" transparent="1" zPosition="1" />
+    <widget source="session.TunerInfo" render="FixedLabel" text="A" position="71,4" size="14,20" font="Regular;16" foregroundColor="unfc0063" backgroundColor="black" halign="center" zPosition="2" transparent="1">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="B" position="85,4" size="14,20" font="Regular;16" foregroundColor="unfc0063" backgroundColor="black" halign="center" zPosition="2" transparent="1">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="C" position="99,4" size="14,20" font="Regular;16" foregroundColor="unfc0063" backgroundColor="black" halign="center" zPosition="2" transparent="1">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">4</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.TunerInfo" render="FixedLabel" text="D" position="113,4" size="14,20" font="Regular;16" foregroundColor="unfc0063" backgroundColor="black" halign="center" zPosition="2" transparent="1">
+      <convert type="TunerInfo">TunerUseMask</convert>
+      <convert type="ValueBitTest">8</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="71,4" size="14,20" font="Regular;16" foregroundColor="unffa500" backgroundColor="black" halign="center" zPosition="2" transparent="1">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">0,0</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="85,4" size="14,20" font="Regular;16" foregroundColor="unffa500" backgroundColor="black" halign="center" zPosition="2" transparent="1">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">1,1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="99,4" size="14,20" font="Regular;16" foregroundColor="unffa500" backgroundColor="black" halign="center" zPosition="2" transparent="1">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">2,2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="113,4" size="14,20" font="Regular;16" foregroundColor="unffa500" backgroundColor="black" halign="center" zPosition="2" transparent="1">
+      <convert type="FrontendInfo">NUMBER</convert>
+      <convert type="ValueRange">3,3</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- /* SERVICEINFO -->
+    <widget source="session.CurrentService" render="Label" position="631,615" zPosition="1" valign="center" size="590,41" font="Arial; 24" backgroundColor="un929292" foregroundColor="white" transparent="1" halign="center">
+      <convert type="openplusHDSmartInfo">ExpertInfo</convert>
+    </widget>
+    <!-- SERVICEINFO */-->
+    <!-- /* AGC -->
+    <eLabel text="SNR:" position="133,4" size="40,21" font="Regular; 16" halign="left" valign="center" backgroundColor="black" foregroundColor="white" transparent="1" noWrap="1" />
+    <widget source="session.FrontendStatus" render="Label" position="173,4" size="40,21" valign="center" font="Regular; 16" backgroundColor="black" foregroundColor="unffa500" transparent="1" halign="left" noWrap="1">
+      <convert type="FrontendInfo">SNR</convert>
+    </widget>
+    <!-- AGC */-->
+    <eLabel text="AGC:" position="215,4" size="40,21" font="Regular; 16" halign="left" valign="center" backgroundColor="black" foregroundColor="white" transparent="1" noWrap="1" />
+    <widget source="session.FrontendStatus" render="Label" position="255,4" size="40,21" valign="center" font="Regular; 16" backgroundColor="black" foregroundColor="unffa500" transparent="1" halign="left" noWrap="1">
+      <convert type="FrontendInfo">AGC</convert>
+    </widget>
+    <!-- /* CRYPT -->
+    <eLabel text="CRYPT:" position="299,4" size="55,21" font="Regular; 16" halign="left" valign="center" backgroundColor="black" foregroundColor="white" transparent="1" />
+    <eLabel position="355,4" size="15,21" text="B" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" zPosition="3" />
+    <widget position="355,4" size="15,21" text="B" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="unffa500" source="session.CurrentService" render="FixedLabel" transparent="1" valign="center" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">BetaCrypt</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_ecm_on.png" position="1162,5" render="Pixmap" size="68,20" source="session.CurrentService" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">BetaEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget position="355,23" size="15,3" backgroundColor="unff00" source="session.CurrentService" render="FixedLabel" zPosition="4" transparent="0">
+      <convert type="openplusHDChannelCryptoInfo">BetaEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <eLabel position="372,4" size="15,21" text="I" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" zPosition="3" />
+    <widget position="372,4" size="15,21" text="I" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="unffa500" source="session.CurrentService" render="FixedLabel" transparent="1" valign="center" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">IrdCrypt</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_ecm_on.png" position="1162,5" render="Pixmap" size="68,20" source="session.CurrentService" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">IrdEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget position="372,23" size="15,3" backgroundColor="unff00" source="session.CurrentService" render="FixedLabel" zPosition="4" transparent="0">
+      <convert type="openplusHDChannelCryptoInfo">IrdEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <eLabel position="385,4" size="15,21" text="S" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" zPosition="3" />
+    <widget position="385,4" size="15,21" text="S" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="unffa500" source="session.CurrentService" render="FixedLabel" transparent="1" valign="center" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">SecaCrypt</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_ecm_on.png" position="1162,5" render="Pixmap" size="68,20" source="session.CurrentService" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">SecaEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget position="385,23" size="15,3" backgroundColor="unff00" source="session.CurrentService" render="FixedLabel" zPosition="4" transparent="0">
+      <convert type="openplusHDChannelCryptoInfo">SecaEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <eLabel position="401,4" size="15,21" text="V" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" zPosition="3" />
+    <widget position="401,4" size="15,21" text="V" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="unffa500" source="session.CurrentService" render="FixedLabel" transparent="1" valign="center" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">ViaCrypt</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_ecm_on.png" position="1162,5" render="Pixmap" size="68,20" source="session.CurrentService" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">ViaEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget position="401,23" size="15,3" backgroundColor="unff00" source="session.CurrentService" render="FixedLabel" zPosition="4" transparent="0">
+      <convert type="openplusHDChannelCryptoInfo">ViaEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <eLabel position="417,4" size="15,21" text="N" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" zPosition="3" />
+    <widget position="417,4" size="15,21" text="N" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="unffa500" source="session.CurrentService" render="FixedLabel" transparent="1" valign="center" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">NagraCrypt</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_ecm_on.png" position="1162,5" render="Pixmap" size="68,20" source="session.CurrentService" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">NagraEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget position="417,23" size="15,3" backgroundColor="unff00" source="session.CurrentService" render="FixedLabel" zPosition="4" transparent="0">
+      <convert type="openplusHDChannelCryptoInfo">NagraEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <eLabel position="433,4" size="30,21" text="CW" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" zPosition="3" />
+    <widget position="433,4" size="30,21" text="CW" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="unffa500" source="session.CurrentService" render="FixedLabel" transparent="1" valign="center" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">CrwCrypt</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_ecm_on.png" position="1162,5" render="Pixmap" size="68,20" source="session.CurrentService" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">CrwEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget position="433,23" size="30,3" backgroundColor="unff00" source="session.CurrentService" render="FixedLabel" zPosition="4" transparent="0">
+      <convert type="openplusHDChannelCryptoInfo">CrwEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <eLabel position="464,4" size="30,21" text="ND" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" zPosition="3" />
+    <widget position="464,4" size="30,21" text="ND" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="unffa500" source="session.CurrentService" render="FixedLabel" transparent="1" valign="center" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">NdsCrypt</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_ecm_on.png" position="1162,5" render="Pixmap" size="68,20" source="session.CurrentService" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">NdsEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget position="464,23" size="30,3" backgroundColor="unff00" source="session.CurrentService" render="FixedLabel" zPosition="4" transparent="0">
+      <convert type="openplusHDChannelCryptoInfo">NdsEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <eLabel position="495,4" size="30,21" text="CO" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="white" transparent="1" valign="center" zPosition="3" />
+    <widget position="495,4" size="30,21" text="CO" font="Regular; 16" halign="center" backgroundColor="black" foregroundColor="unffa500" source="session.CurrentService" render="FixedLabel" transparent="1" valign="center" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">ConaxCrypt</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_ecm_off.png" position="1162,5" size="68,20" zPosition="3" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_ecm_off.png" position="1162,5" render="Pixmap" size="68,20" source="session.CurrentService" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">ConaxCrypt</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_ecm_on.png" position="1162,5" render="Pixmap" size="68,20" source="session.CurrentService" zPosition="4">
+      <convert type="openplusHDChannelCryptoInfo">ConaxEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget position="495,23" size="30,3" backgroundColor="unff00" source="session.CurrentService" render="FixedLabel" zPosition="4" transparent="0">
+      <convert type="openplusHDChannelCryptoInfo">ConaxEcm</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+     <ePixmap alphatest="blend" pixmap="openplusHD/icons/flechas.png" position="34,433" size="64,43" zPosition="-30" />
+    <eLabel backgroundColor="white" name="InfoBar" position="141,476" size="1090,136" zPosition="-10" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/barrahor1.png" position="98,612" size="525,43" backgroundColor="black" zPosition="-30" transparent="1" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/play1.png" position="516,433" size="64,43" zPosition="-30" />
+    <widget font="nmsbd2; 25" foregroundColor="white" noWrap="1" position="118,58" render="Label" size="436,43" source="session.CurrentService" transparent="1" valign="center" zPosition="0" backgroundColor="un929292">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <eLabel backgroundColor="un42b3" position="98,433" size="458,43" transparent="0" zPosition="-31" />
+    <eLabel backgroundColor="un42b3" position="580,433" size="651,43" transparent="0" zPosition="-31" />
+    <!--  WEATHER WIDGET */ -->
+    <!--/* CHANNEL NAME -->
+    <widget backgroundColor="un42b3" font="Regular; 30" halign="left" position="119,433" render="Label" size="327,43" source="session.CurrentService" transparent="1" valign="top" foregroundColor="white" zPosition="-1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <!-- CHANNEL NAME */-->
+    <!-- /* STYLE CLASSIC -->
+    <widget alphatest="blend" position="143,478" render="LBPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <!--<widget source="session.Event_Now" render="Label" position="286,563" size="805,56" font="RegularLight; 37" halign="left" backgroundColor="iplusBackground" transparent="1" noWrap="1">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget font="Regular; 26" foregroundColor="white" noWrap="1" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" position="587,436" render="RunningText" size="500,43" source="session.Event_Now" transparent="1" backgroundColor="un42b3" zPosition="0">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="un42b3" font="Regular; 26" halign="right" position="1092,436" render="Label" size="127,43" source="session.Event_Now" transparent="1" foregroundColor="white">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget pixmap="openplusHD/colors/00a61d4d.png" position="288,661" render="Progress" size="943,-39" source="session.Event_Now" transparent="1" zPosition="7">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget font="Arial; 25" foregroundColor="un585858" halign="right" position="349,495" render="Label" size="125,30" source="session.Event_Next" transparent="1" valign="top" backgroundColor="white">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel font="Arial; 25" foregroundColor="un585858" halign="center" position="481,495" size="15,30" text="&gt;" transparent="1" valign="top" backgroundColor="white" />
+    <widget font="Arial; 25" foregroundColor="un585858" halign="left" position="502,495" render="Label" size="85,30" source="session.Event_Next" transparent="1" valign="top" backgroundColor="white">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <!--<widget source="session.Event_Next" render="Label" position="441,624" size="670,40" font="Regular; 24" halign="left" backgroundColor="iplusBackground" transparent="1" foregroundColor="iplusAccent1" valign="top">
+      	<convert type="EventName">Name</convert>
+    </widget>-->
+    <widget backgroundColor="white" font="Arial; 25" options="movetype=running,direction=left,startpoint=0,startdelay=3000,wrap=1,always=0,repeat=5,oneshot=1" render="RunningText" foregroundColor="un585858" halign="left" position="587,495" size="500,30" source="session.Event_Next" transparent="1" valign="top">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget font="Arial; 25" foregroundColor="un585858" halign="right" position="1092,495" render="Label" size="127,30" source="session.Event_Next" transparent="1" backgroundColor="white" valign="top">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <!-- STYLE CLASSIC */ -->
+    <!--  /* ClockWidget  -->
+    <!--/* ICONOS INFO -->
+    <eLabel backgroundColor="un929292" position="623,612" size="608,43" transparent="0" zPosition="-23" />
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_line_off.png" position="747,559" size="47,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_rec_on.png" position="747,559" render="Pixmap" size="47,25" source="session.RecordState" zPosition="2">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/subtitle_off.png" position="876,559" size="50,25" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/subtitle_on.png" position="876,559" render="Pixmap" size="50,25" source="session.CurrentService" zPosition="1">
+      <convert type="ServiceInfo">SubservicesAvailable</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_line_off.png" position="801,559" size="68,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_hbbtv_on.png" position="801,559" render="Pixmap" size="68,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">HasHBBTV</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_txt_off.png" position="932,559" size="32,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_txt_on.png" position="932,559" render="Pixmap" size="32,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">HasTelext</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_dolby_off.png" position="969,559" size="36,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_dolby_on.png" position="969,559" render="Pixmap" size="36,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">IsMultichannel</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_hd_off.png" position="1172,559" size="49,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_hd_on.png" position="1172,559" render="Pixmap" size="49,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">VideoWidth</convert>
+      <convert type="ValueRange">721,1980</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_hd_on.png" position="1172,559" render="Pixmap" size="49,25" source="session.CurrentService" zPosition="2">
+      <!--convert type="ServiceInfo">VideoWidth</convert>
+				<convert type="ValueRange">721,1980</convert-->
+      <convert type="ServiceInfo">IsHD</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_format_off.png" position="1054,559" size="47,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_format_on.png" position="1054,559" render="Pixmap" size="47,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">IsWidescreen</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/icons/ico_crypt_off.png" position="1010,559" size="39,25" zPosition="1" />
+    <widget alphatest="blend" pixmap="openplusHD/icons/ico_crypt_on.png" position="1010,559" render="Pixmap" size="39,25" source="session.CurrentService" zPosition="2">
+      <convert type="ServiceInfo">IsCrypted</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <!-- ICONOS INFO */-->
+    <!-- /* TUNERTYPE -->
+    <ePixmap alphatest="blend" pixmap="openplusHD/nada.png" position="1106,559" size="60,25" zPosition="0" />
+    <widget source="session.FrontendInfo" alphatest="blend" render="Pixmap" pixmap="openplusHD/icons/sat.png" position="1106,559" size="60,25" transparent="0" zPosition="2">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">0,0</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/nada.png" position="1106,559" size="60,25" zPosition="0" />
+    <widget source="session.FrontendInfo" alphatest="blend" render="Pixmap" pixmap="openplusHD/icons/cable.png" position="1106,559" size="60,25" transparent="0" zPosition="2">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">1,1</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/nada.png" position="1106,559" size="60,25" zPosition="0" />
+    <widget source="session.FrontendInfo" alphatest="blend" render="Pixmap" pixmap="openplusHD/icons/tdt.png" position="1106,559" size="60,25" transparent="0" zPosition="2">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">2,2</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <ePixmap alphatest="blend" pixmap="openplusHD/nada.png" position="1106,559" size="60,25" zPosition="0" />
+    <widget source="session.FrontendInfo" alphatest="blend" render="Pixmap" pixmap="openplusHD/icons/atsc.png" position="1106,559" size="60,25" transparent="0" zPosition="2">
+      <convert type="FrontendInfo">TYPE</convert>
+      <convert type="ValueRange">3,3</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+	  <widget backgroundColor="iplusBackground" halign="center" render="Pixmap" pixmap="openplusHD/icons/iptv.png" position="1106,559" size="60,25" source="session.CurrentService" text="DVB-S2" transparent="1" valign="top" zPosition="1" foregroundColor="iplusBackground">
+<convert type="ServiceName2">%s</convert>
+</widget>
+    <!-- TUNERTYPE */-->
+    <eLabel backgroundColor="black" foregroundColor="black" position="413,559" size="233,25" />
+    <widget backgroundColor="iplusBackground" borderWidth="0" pixmap="openplusHD/colors/00a61d4d.png" position="413,559" render="Progress" size="233,25" source="session.Event_Now" transparent="1" zPosition="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget backgroundColor="un929292" font="nmsbd2; 25" halign="center" position="1073,58" render="Label" size="158,43" source="global.CurrentTime" transparent="1" valign="center" foregroundColor="white">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <eLabel backgroundColor="un929292" position="1073,57" size="158,43" transparent="0" zPosition="-23" />
+    <widget source="session.CurrentService" render="Label" position="440,433" size="69,43" font="Regular; 31" valign="top" halign="right" transparent="1" foregroundColor="white" zPosition="0" backgroundColor="un42b3">
+      <convert type="ExtendedServiceInfo">ServiceNumber</convert>
+    </widget>
+    <eLabel backgroundColor="transpBlackb" position="98,612" size="525,43" transparent="0" zPosition="-32" />
+    <eLabel backgroundColor="transpBlackb" position="98,476" size="43,136" transparent="0" zPosition="-32" />
+    <widget name="key_red" position="105,800" size="240,30" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="black" foregroundColor="black" transparent="1" />
+    <widget name="key_green" position="395,800" size="240,30" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="black" foregroundColor="black" transparent="1" />
+    <widget name="key_yellow" position="685,800" size="240,30" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="black" foregroundColor="black" transparent="1" />
+    <widget name="key_blue" position="975,800" size="240,30" zPosition="1" valign="center" font="Regular; 20" halign="left" backgroundColor="black" foregroundColor="black" transparent="1" />
+    <widget name="epg_description" position="779,595" size="1,1" font="Regular;22" foregroundColor="transparent" backgroundColor="transparent" transparent="1" valign="top" zPosition="-42" />
+  </screen>
+	</skin>
